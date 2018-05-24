@@ -41,21 +41,21 @@ class ProposalController extends Controller
             }
 
     	$proposal->save();
-        return redirect()->action('UserController@index')->with('sukses', 'Postingan Anda Berhasil Ditambahkan');
+        return redirect()->action('UserController@index')->with('sukses', 'Proposal Anda Berhasil Ditambahkan');
     	
     }
 
     public function edit($id)
     {
         //
-        $posts = Postingan::findorfail($id);
+        $posts = Proposal::findorfail($id);
        return view ('proposal.edit',compact('posts'));
 
     }
 
     public function update(Request $request,$id)
-    {  //$temp=Postingan::where('id','like','$id');
-       $posts = Postingan::findorfail($id);
+    {  //$temp=Proposal::where('id','like','$id');
+       $posts = Proposal::findorfail($id);
        // $tempnama=$posts->namafoto;
        // $temptipe=$posts->typefoto;
         
@@ -85,7 +85,7 @@ class ProposalController extends Controller
     
     public function delete($id,$token)
     {
-        $del = Postingan::findorfail($id);
+        $del = Proposal::findorfail($id);
         $del->delete();
 
         switch ($token) {

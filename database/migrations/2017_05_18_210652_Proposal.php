@@ -23,7 +23,7 @@ class Proposal extends Migration
             $table->string('lokasi');
             $table->string('namafoto');
             $table->string('typefoto');
-            $table->string('diskripsi');
+            $table->text('diskripsi');
             $table->string('namaproposal');
             $table->timestamps();
         });
