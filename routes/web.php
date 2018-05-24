@@ -45,6 +45,7 @@ Route::prefix('admin')->group(function()
 	Route::get('/user', 'AdminController@manageUser')->name('admin.user');
 	Route::get('/deleteuser/{id}', 'AdminController@deleteUser')->name('admin.deleteuser');
 	Route::get('/delpost/{id}/pilihan/{token}', 'ProposalController@delete');
+	Route::get('/kelola_investasi', 'AdminController@kelolaInvestasi')->name('admin.investasi');
 });
 
 
@@ -73,6 +74,8 @@ Route::prefix('pemodal')->group(function()
 	Route::get('/', 'PemodalController@index');
 	Route::get('/PakDani', 'PemodalController@PakDani');
 	Route::get('/PakDani/laporan', 'PemodalController@laporan')->name('laporanPakDani');
+
+	Route::post('/do_investasi', 'PemodalController@do_investasi')->name('do_investasi.submit');
 });
 
 Route::prefix('laporan')->group(function()
