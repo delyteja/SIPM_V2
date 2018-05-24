@@ -94,6 +94,8 @@ Route::prefix('progress')->group(function()
 	Route::get('/add','ProgressBisnisController@add');
 	Route::post('/store','ProgressBisnisController@store');
 	Route::get('/delete/{id}','ProgressBisnisController@delete');
+	Route::get('/edit/{id}','ProgressBisnisController@edit');
+	Route::post('/update','ProgressBisnisController@update');
 });
 
 Route::get('/createusaha','ProposalController@create');

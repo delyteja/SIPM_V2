@@ -39,14 +39,26 @@ class ProgressBisnisController extends Controller
         return redirect()->action('ProgressBisnisController@index')->with('sukses', 'Progress Bisnis Berhasil Ditambahkan');
             
     }
-    public function edit()
+    public function edit($id)
     {
-
+        $progres = ProgressBisnis::findorfail($id);
+        return view('progress.edit',compact('progres'));
     }
 
-    public function update()
-    {
-
+    public function update(Request $request)
+    { $id = $request->get('id_progres');
+      $progres = ProgressBisnis::findorfail($id);
+      $progres->tgl_progres = $request->get('tanggal');
+      $progres->keterangan = $request->get('keterangan');
+      if (Input::hasFile('foto') ) 
+            {  
+                $pic = Input::file('foto');
+                $progres->namafoto = time() . '.' .$pic->getClientOriginalName();       
+                Image::make($pic)->resize(300,300)->save(public_path('/progresss/'.$progres->namafoto));
+            }
+      $progres->save();
+      return redirect()->action('ProgressBisnisController@index')->with('sukses', 'Progress Bisnis Berhasil DiUbah');
+      
     }
 
     public function delete($id)
