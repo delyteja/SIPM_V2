@@ -9,15 +9,7 @@
                 <div class="panel-heading">Admin Dashboard</div>
 
                 <div class="panel-body">
-                    <button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href='{{ route('admin.user') }}'">
-                      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  Kelola Pengguna
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href='{{ route('admin.message') }}'">
-                      <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  Kelola Pesan
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href={{ URL::to('/admin')}}">
-                      <span class="glyphicon glyphicon-file" aria-hidden="true"></span>  Kelola Proposal
-                    </button>
+                    @extends('admins.header_menu')
                 </div>
                 <br><br>
                 <div class="panel-heading">Proposal Pebisnis</div>

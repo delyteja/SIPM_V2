@@ -140,9 +140,17 @@ h4 {
       color: #fff !important;
       background-color: #00384d !important
     }
+    .span:hover #caret{
+      color: #fff !important;
+      background-color: #00384d !important
+    }
     .navbar-nav li a:hover, .navbar-nav li.active a {
       color: #00384d !important;
       background-color: #fff !important;
+    }
+    .navbar-nav li a:hover #caret, .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #00384d !important;
     }
     .navbar-default .navbar-toggle {
       border-color: transparent;
