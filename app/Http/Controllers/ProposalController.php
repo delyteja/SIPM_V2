@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Input;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Response as HttpResponse;
 use App\Proposal;
+use App\User;
+
 use Auth;
 class ProposalController extends Controller
 {
@@ -102,7 +104,9 @@ class ProposalController extends Controller
 
     public function detail($nama,$dana)
     {
-        dd($nama);
+        $proposal = Proposal::where('namausaha','like',$nama)->where('kebutuhan_dana',$dana)->first();
+        $pebisnis = User::where('no_ktp',$proposal->no_ktp_pebisnis)->first();
+        return view('proposal.index',compact('proposal','pebisnis'));
     }
 
 

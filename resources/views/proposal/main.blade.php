@@ -92,22 +92,23 @@ for (i = 0; i < acc.length; i++) {
     <div class="list-group" style="text-align: left;">
       <ul style="list-style: none;">
         <li><h4><strong>Total Biaya Yang Dibutuhkan</strong></h4></li>
-        <h4>Rp 2.000.000,00</h4><hr style="border-color: black; width: 35%;">
+        <h4>Rp @yield('dana_butuh')</h4><hr style="border-color: black; width: 35%;">
         <li><h4><strong>Dana Yang Terkumpul</strong></h4></li>
-        <h4>Rp 500.000,00</h4><hr style="border-color: black; width: 35%;">
+        <h4>Rp @yield('dana_kumpul') </h4><hr style="border-color: black; width: 35%;">
         <li><h4><strong>Progress Pendanaan</strong></h4></li>
         <div class="w3-light-grey w3-round-large">
+        
         <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
         </div>
         <hr style="border-color: black; width: 35%;">
         <li><h4><strong>Detail Usaha</strong></h4></li>
         <p card-text style="text-align: justify;">
-          Pak Dani membuka Usaha beraneka ragam macam kopi dan makan ringan, Pak Dani juga menjual beraneka ragam nasi, Pak Dani membutuhkan tambahan modal sebesar Rp 2.000.000,00 untuk menambah barang dagangan dan untuk membeli kursi baru untuk tempat duduk pelanggan, semua itu dilakukan Pak Dani agar usaha yang sedang dijalaninya sekarang semakin besar sehingga besar pula keuntungan yang didapat
+        @yield('diskripsi')
         </p>
 
         <button class="accordion"><b>Chat Dengan Pebisnis > </b> </button>
         <div class="panel">
-          <p><b>Chat via pesan pada email: pebisnis@gmail.com</b></p>
+          <p><b>Chat via pesan pada email: @yield('kontak')</b></p>
         </div>
         <button class="accordion"><b>Lihat Rekening > </b> </button>
         <div class="panel">
