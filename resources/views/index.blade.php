@@ -51,7 +51,7 @@ Home
         <div class="col-sm-4">
           <div class="thumbnail">
             <img src="/foto/{{$pn->namafoto}}" alt="{{$pn->namafoto}}" width="400" height="200">
-            <a href="{{ URL::to('/PakDani')}}"><p><strong>{{$pn->namausaha}}</strong></p></a>
+             <a href="{{ URL::to('/proposal/detail/'.$pn->namausaha.'/'.$pn->kebutuhan_dana)}}"><p><strong>{{$pn->namausaha}}</strong></p></a>
             <div class="w3-light-grey w3-round-large">
               <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
             </div>

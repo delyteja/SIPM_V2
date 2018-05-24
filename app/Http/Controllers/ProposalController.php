@@ -106,7 +106,7 @@ class ProposalController extends Controller
     {
         $proposal = Proposal::where('namausaha','like',$nama)->where('kebutuhan_dana',$dana)->first();
         $pebisnis = User::where('no_ktp',$proposal->no_ktp_pebisnis)->first();
-        return view('proposal.index',compact('proposal','pebisnis'));
+        return view('proposal.main',compact('proposal','pebisnis'));
     }
 
 
