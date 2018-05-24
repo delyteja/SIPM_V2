@@ -19,6 +19,7 @@ class Investasi extends Migration
             $table->string('no_ktp_pemodal');
             $table->string('namafoto');
             $table->integer('jumlah');
+            $table->integer('status')->default(0);
             $table->integer('proposal_id');
             $table->timestamps();
             
