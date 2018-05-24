@@ -104,6 +104,10 @@ for (i = 0; i < acc.length; i++) {
         {{$proposal->diskripsi}}
         </p>
 
+        <button class="accordion"><b>Unduh Proposal > </b> </button>
+        <div class="panel">
+          <p><b><a href="/proposal/{{$proposal->namaproposal}}" download>{{$proposal->namaproposal}}</a></b></p>
+        </div>
         <button class="accordion"><b>Chat Dengan Pebisnis > </b> </button>
         <div class="panel">
           <p><b>Chat via pesan pada email: {{$pebisnis->email}}</b></p>
