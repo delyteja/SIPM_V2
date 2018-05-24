@@ -100,6 +100,11 @@ class ProposalController extends Controller
         
     }
 
+    public function detail($nama,$dana)
+    {
+        dd($nama);
+    }
+
 
           
 }
