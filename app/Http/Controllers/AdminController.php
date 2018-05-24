@@ -51,4 +51,18 @@ class AdminController extends Controller
         $investasi = Investasi::All();
         return view('admins.investasi', compact('investasi'));
     }
+
+    public function verifikasiInvestasi($id)
+    {
+        DB::table('investasi')
+            ->where('id', $id)
+            ->update(['status' => 1]);
+    }
+
+    public function batalInvestasi($id)
+    {
+        DB::table('investasi')
+            ->where('id', $id)
+            ->update(['status' => 0]);
+    }
 }

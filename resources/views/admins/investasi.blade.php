@@ -21,15 +21,19 @@
                                 <th class="col-md-2">Aksi</th>
                             </tr>
                         <tbody>
-                            @foreach ($messages as $message )
+                            @foreach ($investasi as $oneinvestasi )
                                 <tr>
-                                    <td class="col-md-2">{{$investasi->no_ktp_pemodal}}</td>
-                                    <td class="col-md-2">{{$investasi->no_ktp_pebisnis}}</td>
-                                    <td class="col-md-2">{{$investasi->jumlah}}</td>
-                                    <td class="col-md-3"><img src="/foto/{{ $investasi->namafoto }}" style="width: 150px; height: 150px;"></td>
-                                    <td class="col-md-1">{{$investasi->updated_at}}</td>
+                                    <td class="col-md-2">{{ $oneinvestasi['no_ktp_pemodal'] }}</td>
+                                    <td class="col-md-2">{{ $oneinvestasi['no_ktp_pebisnis'] }}</td>
+                                    <td class="col-md-2">{{ $oneinvestasi['jumlah'] }}</td>
+                                    <td class="col-md-3"><img src="/foto/{{ $oneinvestasi->namafoto }}" style="width: 150px; height: 150px;"></td>
+                                    <td class="col-md-1">{{ $oneinvestasi['updated_at'] }}</td>
                                     <td class="col-md-2">
-                                    <a href="{{route('deletemessage',$message->id)}}" class="btn btn-default">Delete</a></td>
+                                    @if ( $oneinvestasi['status'] == 0 )
+                                    <a href="{{ route('admin.verifikasiInvestasi', $oneinvestasi->id ) }}" class="btn btn-success">Verifikasi</a></td>
+                                    @else
+                                    <a href="{{ route('admin.batalInvestasi', $oneinvestasi->id ) }}" class="btn btn-danger">Batalkan</a></td>
+                                    @endif
                                 </tr>
                             @endforeach
                         </tbody>
