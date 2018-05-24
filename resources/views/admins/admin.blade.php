@@ -52,7 +52,7 @@
         <td>Peternakan</td>
         @endif
         <td>
-        <a href="/proposal/{{$p->lokasi}}" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Lihat Lokasi</button></a>
+        <a href="/location/{{$p->lokasi}}" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Lihat Lokasi</button></a>
         </td>
         <td>{{ $p->kebutuhan_dana }}</td>
         <td><img src="/foto/{{ $p->namafoto }}" style="width: 150px; height: 150px;"> </td>
