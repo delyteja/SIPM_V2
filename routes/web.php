@@ -85,6 +85,14 @@ Route::prefix('laporan')->group(function()
 	
 });
 
+Route::prefix('progress')->group(function()
+{
+	Route::get('/','ProgressBisnisController@index');
+	Route::get('/add','ProgressBisnisController@add');
+	Route::post('/store','ProgressBisnisController@store');
+	Route::get('/delete/{id}','ProgressBisnisController@delete');
+});
+
 Route::get('/createusaha','ProposalController@create');
 
 Route::get('/profile','UserController@profile');

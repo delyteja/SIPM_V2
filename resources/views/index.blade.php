@@ -35,7 +35,7 @@ Home
             <div class="w3-light-grey w3-round-large">
               <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
             </div>
-            <p style="margin-top:10px;"><b>Terkumpul Rp 500.000,00/Rp 2000.000,00</b></p>
+            <p style="margin-top:10px;"><b>Terkumpul Rp{{$p->dana_terkumpul}}/Rp {{$p->kebutuhan_dana}} </b></p>
           </div>
         </div>
     @endforeach
@@ -55,7 +55,7 @@ Home
             <div class="w3-light-grey w3-round-large">
               <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
             </div>
-            <p style="margin-top:10px;"><b>Terkumpul Rp 500.000,00/Rp 2000.000,00</b></p>            
+            <p style="margin-top:10px;"><b>Terkumpul Rp{{$pn->dana_terkumpul}}/Rp {{$pn->kebutuhan_dana}} </b></p>            
           </div>
         </div>
       @endforeach
