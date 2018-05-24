@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Message;
 use App\User;
 use App\Proposal;
+use App\Investasi;
 
 class AdminController extends Controller
 {
@@ -45,5 +46,9 @@ class AdminController extends Controller
         return view('admins.location2',compact('lokasi'));
     }
     
-    
+    public function kelolaInvestasi()
+    {
+        $investasi = Investasi::All();
+        return view('admins.investasi', compact('investasi'));
+    }
 }

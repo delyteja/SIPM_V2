@@ -45,6 +45,7 @@ Route::prefix('admin')->group(function()
 	Route::get('/user', 'AdminController@manageUser')->name('admin.user');
 	Route::get('/deleteuser/{id}', 'AdminController@deleteUser')->name('admin.deleteuser');
 	Route::get('/delpost/{id}/pilihan/{token}', 'ProposalController@delete');
+	Route::get('/kelola_investasi', 'AdminController@kelolaInvestasi')->name('admin.investasi');
 });
 
 

@@ -10,21 +10,20 @@
           <input id="no_ktp_pebisnis" name="no_ktp_pebisnis" type="hidden" value="{{}}" >
           <input id="proposal_id" name="proposal_id" type="hidden" value="{{}}" >
           <div class="form-group">
-            <label class="col-sm-3 control-label">No. Rekening</label>
-            <div class="col-sm-9">
-              <input class="form-control" name="no_rekening" id="rekening" placeholder="Masukkan nomor rekening anda">
-            </div>
-          </div>
-          <div class="form-group">
             <label class="col-sm-3 control-label">Jumlah Investasi</label>
             <div class="col-sm-9">
               <input class="form-control" name="jumlah_investasi" id="jumlah_investasi" placeholder="Masukkan jumlah uang untuk diinvestasikan">
             </div> 
           </div>
-          <div class="form-group">
+          <div class="form-group{{ $errors->has('foto usaha') ? ' has-error' : '' }}">
             <label class="col-sm-3 control-label">Bukti Transfer</label>
             <div class="col-sm-9">
-              {!! Form::file('bukti_transfer', null, array('class' => 'form-control','placeholder'=>'Bukti Transfer')) !!}
+              <input id="bukti_foto" type="file" class="form-control" name="bukti_foto" required>
+                @if ($errors->has('bukti_foto'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('bukti_foto') }}</strong>
+                  </span>
+                @endif
             </div> 
           </div>
         </div>
