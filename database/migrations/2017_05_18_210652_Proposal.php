@@ -19,6 +19,7 @@ class Proposal extends Migration
             $table->string('namausaha');
             $table->string('id_kategori');
             $table->integer('kebutuhan_dana');
+            $table->integer('dana_terkumpul')->nullable();
             $table->string('lokasi');
             $table->string('namafoto');
             $table->string('typefoto');

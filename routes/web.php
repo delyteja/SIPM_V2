@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 Route::get('/home', 'UserController@index');
+Route::get('/', 'Controller@index');
 
 //Route::get('/', 'UserController@true_index');
 Route::get('test', function()
@@ -95,7 +93,6 @@ Route::post('/profile','UserController@update_avatar');
 Route::get('/startup','UserController@startup');
 Route::get('/wirausaha','UserController@wirausaha');
 Route::get('/PakDani','UserController@PakDani');
-Route::get('/index2','Controller@index');
 Route::get('/location/{lokasi}','AdminController@location');
 
 
