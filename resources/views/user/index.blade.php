@@ -53,7 +53,7 @@ User
         <td><img src="/foto/{{ $p->namafoto }}" style="width: 150px; height: 150px;"> </td>
         <td>{{ $p->diskripsi }}</td>
         <td align="center" width="30px">
-          <a href="/postingan/{{$p->id}}" class="btn btn-warning btn-sm" 
+          <a href="/proposal/{{$p->id}}" class="btn btn-warning btn-sm" 
           role="button"><i class="fa fa-pencil-square"></i> Edit</a>
         </td>
         <td align="center" width="30px">

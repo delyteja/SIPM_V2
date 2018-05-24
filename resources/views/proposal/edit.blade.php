@@ -25,7 +25,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                 
- {!! Form::model($posts,['files'=>true, 'method'=>'POST','action'=>['PostinganController@update',$posts->id]]) !!}
+ {!! Form::model($posts,['files'=>true, 'method'=>'POST','action'=>['ProposalController@update',$posts->id]]) !!}
                        <div class="form-group">
                             {!! Form::label('Email', 'Email') !!}
                             {!! Form::text('email',null, array('class' => 'form-control','placeholder'=>'Email')) !!}
