@@ -4,7 +4,7 @@
             <section class="content-header">
             <h1>Tambah Progress Bisnis</h1>
             </section>
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="margin-bottom:290px;margin-top:75px;">
                     <div class="panel-body">
                         <form method="POST" action="{{ url('/progress/store')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}

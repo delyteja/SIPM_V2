@@ -33,5 +33,12 @@
 @include('template.footer')
 @include('template.js')
 @yield('new-js')
+<!-- <script>
+$('.pull-down').each(function() {
+  var $this=$(this);
+	$this.css('margin-top', $this.parent().height()-$this.height())
+});
+</script> -->
+
 </body>
 </html>

@@ -2,9 +2,9 @@
 @section('content')
 
             <section class="content-header">
-            <h1>Edit Laporan Usaha</h1>
+            <h1>Edit Laporan Pendanaan</h1>
             </section>
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="margin-bottom:290px;margin-top:100px;">
                     <div class="panel-body">
                         
                     <form method="POST" action="{{ url('/laporan/update')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">

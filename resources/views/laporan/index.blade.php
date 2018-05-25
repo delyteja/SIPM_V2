@@ -9,9 +9,9 @@ Laporan Pendanaan
 
 
 @section('content')
- <div class="panel panel-default">
-<div class="panel-body" style="margin-bottom:200px;">
-<h4><i class="fa fa-university"></i> Laporan Pendanaan Usaha Warung Pak Dani</h4><hr>
+ <div class="panel panel-default" style="margin-bottom:100px;">
+<div class="panel-body" style="margin-bottom:300px;">
+<h4><i class="fa fa-university"></i> Laporan Pendanaan</h4><hr>
 <div class=row>
     <div class="col-md-6">
         <a href="{{ URL::to('laporan/add')}}" class="btn btn-primary">
