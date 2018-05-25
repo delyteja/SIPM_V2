@@ -23,14 +23,14 @@ Home
       <h2><p>Perdagangan</p></h2>
       <div class="row">
     @foreach($perdagangan as $p)
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="thumbnail">
             <img src="/foto/{{$p->namafoto}}" alt="{{$p->namafoto}}" width="400" height="200">
             <a href="{{ URL::to('/pemodal/proposal/detail/'.$p->namausaha.'/'.$p->kebutuhan_dana)}}"><p><strong>{{$p->namausaha}}</strong></p></a>
             <div class="w3-light-grey w3-round-large">
               <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
             </div>
-            <p style="margin-top:10px;"><b>Terkumpul Rp{{$p->dana_terkumpul}}/Rp {{$p->kebutuhan_dana}} </b></p>
+            <p style="margin-top:10px;"><b>Terkumpul Rp {{$p->dana_terkumpul}}/Rp {{$p->kebutuhan_dana}} </b></p>
           </div>
         </div>
     @endforeach
@@ -43,7 +43,7 @@ Home
       <h2><p>Peternakan</p></h2>
       <div class="row">
       @foreach($peternakan as $pn)
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="thumbnail">
             <img src="/foto/{{$pn->namafoto}}" alt="{{$pn->namafoto}}" width="400" height="200">
              <a href="{{ URL::to('/pemodal/proposal/detail/'.$pn->namausaha.'/'.$pn->kebutuhan_dana)}}"><p><strong>{{$pn->namausaha}}</strong></p></a>

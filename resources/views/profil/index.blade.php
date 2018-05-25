@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('template.master_pemodal')
 
 @section('content')
 
-<div class="container">
+<div class="container" style="margin-bottom:  230px; margin-top:  50px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
            <img src="/avatar/{{$user->avatar}}" style="width:150px;height:150px; float:left; border-radius: 50%; margin-right: 25px; ">

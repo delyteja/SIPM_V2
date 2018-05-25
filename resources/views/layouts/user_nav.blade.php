@@ -1,5 +1,5 @@
 <div style="display:inline-block;">
-  <h3 style="color:white; "><b>Selamat Datang, {{ Auth::user()->name }}</b></h3>
+  <h4 style="color:white; "><b>{{ Auth::user()->name }}</b></h4>
 </div>
 <div style="display:inline-block; margin-right:60px;">
   <li class="dropdown">
