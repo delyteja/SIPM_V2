@@ -29,7 +29,8 @@
                                     <td class="col-md-1">{{$oneinvestasi['updated_at']}}</td>
                                     <td class="col-md-2">
                                     @if ( $oneinvestasi['status'] == 0 )
-                                    <a href="{{ route('admin.verifikasiInvestasi', $oneinvestasi->id, $oneinvestasi['no_ktp_pebisnis'], $oneinvestasi['jumlah']) }}" class="btn btn-success">Verifikasi</a></td>
+                                    <!-- <a href="{{ route('admin.verifikasiInvestasi', $oneinvestasi->id, $oneinvestasi['no_ktp_pebisnis'], $oneinvestasi['jumlah']) }}" class="btn btn-success">Verifikasi</a></td> -->
+                                    <a href="{{ URL::to('/admin/investasi/verifikasi/{$oneinvestasi->id}/{$oneinvestasi['no_ktp_pebisnis']}/{$oneinvestasi['jumlah']}')}}" class="btn btn-success">Verifikasi</a></td>
                                     @else
                                     <a href="{{ route('admin.batalInvestasi', $oneinvestasi->id, $oneinvestasi['no_ktp_pebisnis'], $oneinvestasi['jumlah']) }}" class="btn btn-danger">Batalkan</a></td>
                                     @endif
