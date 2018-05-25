@@ -9,7 +9,6 @@
                 <div class="panel-heading">Admin Dashboard</div>
 
                 <div class="panel-body">
-                    @extends('admins.header_menu')
                 </div>
                 <br><br>
                 <div class="panel-heading">Proposal Pebisnis</div>
@@ -54,8 +53,6 @@
         </td>
         @php  $token=1;    @endphp
         <td>
-         <a href="#" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Detail</button></a>
-         <!-- <a href="#" ><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Lokasi</button></a> -->
           <a href="/admin/delpost/{{$p->id}}/pilihan/2" class="btn btn-sm btn-danger delete-btn" 
           role="button"><i class="fa fa-times-circle"></i> delete</a>
         

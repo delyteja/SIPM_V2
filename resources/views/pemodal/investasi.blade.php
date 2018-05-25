@@ -7,8 +7,8 @@
           <h4 class="modal-title"><strong>INVESTASI</strong></h4>
         </div>
         <div class="modal-body">
-          <input id="no_ktp_pebisnis" name="no_ktp_pebisnis" type="hidden" value="" >
-          <input id="proposal_id" name="proposal_id" type="hidden" value="" >
+          <input id="no_ktp_pebisnis" name="no_ktp_pebisnis" type="hidden" value="{{ $pebisnis['no_ktp_pebisnis'] }}" >
+          <input id="proposal_id" name="proposal_id" type="hidden" value="{{ $proposal['id'] }}" >
           <div class="form-group">
             <label class="col-sm-3 control-label">Jumlah Investasi</label>
             <div class="col-sm-9">
