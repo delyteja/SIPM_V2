@@ -73,6 +73,7 @@ Route::prefix('pemodal')->group(function()
 	});
 	Route::get('/', 'PemodalController@index');
 	Route::get('/PakDani', 'PemodalController@PakDani');
+	Route::get('/proposal/detail/{usaha}/{dana}', 'PemodalController@detail');
 	Route::get('/PakDani/laporan', 'PemodalController@laporan')->name('laporanPakDani');
 
 	Route::post('/do_investasi', 'PemodalController@do_investasi')->name('do_investasi.submit');
