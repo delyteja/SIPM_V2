@@ -53,11 +53,11 @@ User
         <td><img src="/foto/{{ $p->namafoto }}" style="width: 150px; height: 150px;"> </td>
         <td>{{ $p->diskripsi }}</td>
         <td align="center" width="30px">
-          <a href="/postingan/{{$p->id}}" class="btn btn-warning btn-sm" 
+          <a href="/proposal/{{$p->id}}" class="btn btn-warning btn-sm" 
           role="button"><i class="fa fa-pencil-square"></i> Edit</a>
         </td>
         <td align="center" width="30px">
-          <a href="/delpostingan/{{$p->id}}/pilihan/1" class="btn btn-sm btn-danger delete-btn" 
+          <a href="/delproposal/{{$p->id}}/pilihan/1" class="btn btn-sm btn-danger delete-btn" 
           role="button"><i class="fa fa-times-circle"></i> delete</a>
         </td>       
     </tr>

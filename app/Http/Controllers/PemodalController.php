@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Investasi;
 use Illuminate\Http\Request;
+use App\Proposal;
+use App\User;
 
 use Auth;
 
@@ -15,7 +17,9 @@ class PemodalController extends Controller
     }
     
     public function index() {
-    	return view('pemodal.index');
+        $perdagangan = Proposal::where('id_kategori','1')->get();
+        $peternakan = Proposal::where('id_kategori','2')->get();
+        return view('pemodal.index',compact('perdagangan','peternakan'));
     }
 
     public function PakDani () {
@@ -55,5 +59,13 @@ class PemodalController extends Controller
         $investasi->save();
         //DB::table('proposal')->increment('dana_terkumpul', $jumlah_investasi, ['id' => $proposal_id]);        // khusus untuk update ke tabel proposal
         return redirect()->action('PemodalController@index')->with('sukses', 'Investasi anda berhasil dikirim');
+    }
+
+    public function detail($usaha,$dana)
+    {  
+        $proposal = Proposal::where('namausaha','like',$usaha)->where('kebutuhan_dana',$dana)->first();
+        $pebisnis = User::where('no_ktp',$proposal->no_ktp_pebisnis)->first();
+        return view('pemodal.proposaldetail',compact('proposal','pebisnis'));
+
     }
 }

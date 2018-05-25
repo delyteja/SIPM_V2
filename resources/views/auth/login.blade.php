@@ -1,7 +1,7 @@
 @extends('template.master')
 
 @section('content')
-<div class="container" style="margin-bottom:205px;">
+<div class="container" style="margin-bottom:250px;margin-top:100px;">
     <div class="row" style="margin-top:50px;">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">

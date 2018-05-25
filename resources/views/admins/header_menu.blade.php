@@ -4,7 +4,7 @@
 <button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href='{{ route('admin.message') }}'">
     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>  Kelola Pesan
 </button>
-<button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href={{ URL::to('/admin')}}">
+<button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href='{{ route('admin.dashboard') }}'">
     <span class="glyphicon glyphicon-file" aria-hidden="true"></span>  Kelola Proposal
 </button>
 <button type="button" class="btn btn-default" aria-label="Left Align" onclick="window.location.href='{{ route('admin.investasi') }}'">

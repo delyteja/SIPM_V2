@@ -7,7 +7,7 @@ use App\Message;
 use App\User;
 use App\Proposal;
 use App\Investasi;
-
+use DB;
 class AdminController extends Controller
 {
     /**
@@ -51,6 +51,7 @@ class AdminController extends Controller
         $investasi = Investasi::All();
         return view('admins.investasi', compact('investasi'));
     }
+<<<<<<< HEAD
 
     public function verifikasiInvestasi($id)
     {
@@ -65,4 +66,20 @@ class AdminController extends Controller
             ->where('id', $id)
             ->update(['status' => 0]);
     }
+=======
+    
+   public function verifikasiInvestasi($id)
+   {
+       DB::table('investasi')
+           ->where('id', $id)
+           ->update(['status' => 1]);
+   }
+
+   public function batalInvestasi($id)
+   {
+       DB::table('investasi')
+           ->where('id', $id)
+           ->update(['status' => 0]);
+   }
+>>>>>>> master
 }

@@ -8,7 +8,6 @@
                 <div class="panel-heading">Manage Message</div>
 
                 <div class="panel-body">
-                    @extends('admins.header_menu')
                     <div class="table-responsive">
                       <table class="table">
                         <thead>

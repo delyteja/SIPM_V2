@@ -7,7 +7,7 @@
             </section>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form method="POST" action="{{ url('/submitproposal')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('/submitproposal')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             
                             <div class="form-group{{ $errors->has('namausaha') ? ' has-error' : '' }}">

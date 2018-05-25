@@ -1,6 +1,6 @@
 @extends('template.master_pemodal')
 @section('judul')
-Usaha Warung Pak Dani
+{{$proposal->namausaha}}
 @endsection
 @section('new-css')
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -56,29 +56,27 @@ for (i = 0; i < acc.length; i++) {
 @endsection
 
 @section('nav-right')
-  @include('layouts/user_nav')
 @endsection
 
 
 @section('content')
 <!-- Page Content -->
 <div class="container">
-<h1 class="my-4">@yield('namausaha')</h1>
+<h1 class="my-4">{{$proposal->namausaha}}</h1>
 </br>
 <div class="row">
 
   <div class="col-md-6">
 
     <div class="card mt-4">
-      <!-- <img class="card-img-top img-fluid" style="width: 85%; height: 85%;" src="{{asset ('img/warung.jpg')}}" alt=""> -->
-      @yield('foto')
+    <img class="card-img-top img-fluid" style="width: 85%; height: 85%;" src="/foto/{{$proposal->namafoto}}" alt="{{$proposal->namafoto}}">
     </div>
     <!-- /.card -->
 
     <div class="card card-outline-secondary my-4">
       <div class="card-body">
         <hr>
-        <a style="margin-bottom:30px;" data-toggle="modal" data-target="#modal-investasi" class="btn btn-success">Bantu @yield('pebisnis')</a>
+        <a style="margin-bottom:30px;" data-toggle="modal" data-target="#modal-investasi" class="btn btn-success">Bantu {{$pebisnis->name}}</a>
         <a style="margin-bottom:30px; margin-left: 30px;" href="{{ route('laporanPakDani') }}" class="btn btn-primary">Lihat Laporan</a>
         <hr>
       </div>
@@ -92,22 +90,27 @@ for (i = 0; i < acc.length; i++) {
     <div class="list-group" style="text-align: left;">
       <ul style="list-style: none;">
         <li><h4><strong>Total Biaya Yang Dibutuhkan</strong></h4></li>
-        <h4>Rp 2.000.000,00</h4><hr style="border-color: black; width: 35%;">
+        <h4>Rp {{$proposal->kebutuhan_dana}}</h4><hr style="border-color: black; width: 35%;">
         <li><h4><strong>Dana Yang Terkumpul</strong></h4></li>
-        <h4>Rp 500.000,00</h4><hr style="border-color: black; width: 35%;">
+        <h4>Rp {{$proposal->dana_terkumpul}} </h4><hr style="border-color: black; width: 35%;">
         <li><h4><strong>Progress Pendanaan</strong></h4></li>
         <div class="w3-light-grey w3-round-large">
+        
         <div class="w3-container w3-blue w3-round-large" style="width:25%">25%</div>
         </div>
         <hr style="border-color: black; width: 35%;">
         <li><h4><strong>Detail Usaha</strong></h4></li>
         <p card-text style="text-align: justify;">
-          Pak Dani membuka Usaha beraneka ragam macam kopi dan makan ringan, Pak Dani juga menjual beraneka ragam nasi, Pak Dani membutuhkan tambahan modal sebesar Rp 2.000.000,00 untuk menambah barang dagangan dan untuk membeli kursi baru untuk tempat duduk pelanggan, semua itu dilakukan Pak Dani agar usaha yang sedang dijalaninya sekarang semakin besar sehingga besar pula keuntungan yang didapat
+        {{$proposal->diskripsi}}
         </p>
 
+        <button class="accordion"><b>Unduh Proposal > </b> </button>
+        <div class="panel">
+          <p><b><a href="/proposal/{{$proposal->namaproposal}}" download>{{$proposal->namaproposal}}</a></b></p>
+        </div>
         <button class="accordion"><b>Chat Dengan Pebisnis > </b> </button>
         <div class="panel">
-          <p><b>Chat via pesan pada email: pebisnis@gmail.com</b></p>
+          <p><b>Chat via pesan pada email: {{$pebisnis->email}}</b></p>
         </div>
         <button class="accordion"><b>Lihat Rekening > </b> </button>
         <div class="panel">

@@ -26,7 +26,7 @@ Route::get('/index', 'UserController@index');  // dasboard user
 Route::get('/createproposal','ProposalController@create');
 Route::post('/submitproposal','ProposalController@store');  // DIGANTI
 Route::get('/proposal/{id}','ProposalController@edit');
-Route::post('/update/{id}','ProposalController@update');
+Route::post('/update','ProposalController@update');
 Route::get('/delproposal/{id}/pilihan/{token}','ProposalController@delete');
 
 // =======
@@ -45,6 +45,10 @@ Route::prefix('admin')->group(function()
 	Route::get('/user', 'AdminController@manageUser')->name('admin.user');
 	Route::get('/deleteuser/{id}', 'AdminController@deleteUser')->name('admin.deleteuser');
 	Route::get('/delpost/{id}/pilihan/{token}', 'ProposalController@delete');
+<<<<<<< HEAD
+=======
+	// Route::get('/kelola_investasi', 'AdminController@kelolaInvestasi')->name('admin.investasi');
+>>>>>>> master
 	
 	Route::prefix('investasi')->group(function() {
 		Route::get('/', 'AdminController@kelolaInvestasi')->name('admin.investasi');
@@ -52,6 +56,10 @@ Route::prefix('admin')->group(function()
 		Route::get('/batalkan{id}', 'AdminController@batalInvestasi')->name('admin.batalInvestasi');
 	});
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 });
 
 
@@ -79,6 +87,7 @@ Route::prefix('pemodal')->group(function()
 	});
 	Route::get('/', 'PemodalController@index');
 	Route::get('/PakDani', 'PemodalController@PakDani');
+	Route::get('/proposal/detail/{usaha}/{dana}', 'PemodalController@detail');
 	Route::get('/PakDani/laporan', 'PemodalController@laporan')->name('laporanPakDani');
 
 	Route::post('/do_investasi', 'PemodalController@do_investasi')->name('do_investasi.submit');
@@ -89,9 +98,20 @@ Route::prefix('laporan')->group(function()
 	Route::get('/index','laporanController@index')->name('laporan');
 	Route::get('/add','laporanController@add');
 	Route::post('/store','laporanController@store');
+	Route::post('/update','laporanController@update');
 	Route::get('/edit/{id}','laporanController@edit');
 	Route::get('/delete/{id}','laporanController@delete');
 	
+});
+
+Route::prefix('progress')->group(function()
+{
+	Route::get('/','ProgressBisnisController@index');
+	Route::get('/add','ProgressBisnisController@add');
+	Route::post('/store','ProgressBisnisController@store');
+	Route::get('/delete/{id}','ProgressBisnisController@delete');
+	Route::get('/edit/{id}','ProgressBisnisController@edit');
+	Route::post('/update','ProgressBisnisController@update');
 });
 
 Route::get('/createusaha','ProposalController@create');

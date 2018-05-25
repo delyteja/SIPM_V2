@@ -2,9 +2,9 @@
 @section('content')
 
             <section class="content-header">
-            <h1>Tambah Laporan Usaha</h1>
+            <h1>Tambah Laporan Pendanaan</h1>
             </section>
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="margin-bottom:200px;margin-top:150px;">
                     <div class="panel-body">
                         <form method="POST" action="{{ url('/laporan/store')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}

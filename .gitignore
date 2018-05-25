@@ -19,3 +19,5 @@ vendor/composer/autoload_real.php
 vendor/composer/autoload_static.php
 vendor/composer/ClassLoader.php
 vendor/composer/LICENSE
+.env
+.env

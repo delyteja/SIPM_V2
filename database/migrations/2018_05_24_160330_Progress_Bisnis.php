@@ -15,8 +15,10 @@ class ProgressBisnis extends Migration
     {
         Schema::create('ProgressBisnis', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('namafoto');
+            $table->text('keterangan');
             $table->string('no_ktp_pebisnis');
-            $table->string('no_ktp_pemodal');
+            $table->date('tgl_progres');
             $table->integer('proposal_id');
             $table->timestamps();
             

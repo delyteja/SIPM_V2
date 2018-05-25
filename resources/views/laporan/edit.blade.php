@@ -2,12 +2,14 @@
 @section('content')
 
             <section class="content-header">
-            <h1>Edit Laporan Usaha</h1>
+            <h1>Edit Laporan Pendanaan</h1>
             </section>
-                <div class="panel panel-default">
+                <div class="panel panel-default" style="margin-bottom:290px;margin-top:100px;">
                     <div class="panel-body">
-                        {!! Form::model($laporan,['files'=>true, 'method'=>'POST','action'=>['laporanController@update',$laporan->id],'class'=>'form-horizontal']) !!}
-
+                        
+                    <form method="POST" action="{{ url('/laporan/update')}}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                      <input type="hidden" name="id_laporan" value="{{$laporan->id}}">
                        <div class="form-group">
                             <label for="aktivitas" class="col-md-4 control-label">Aktivitas</label>
                             <div class="col-md-6">
@@ -29,7 +31,7 @@
                         
                         {!! Form::button(' Simpan', array('type' => 'submit', 'class' => 'btn btn-primary'))!!}
 
-                        {!! Form::close()!!}
+                        </form>
                     </div>
                </div>
 @endsection
