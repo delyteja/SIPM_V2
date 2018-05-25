@@ -26,7 +26,7 @@ Route::get('/index', 'UserController@index');  // dasboard user
 Route::get('/createproposal','ProposalController@create');
 Route::post('/submitproposal','ProposalController@store');  // DIGANTI
 Route::get('/proposal/{id}','ProposalController@edit');
-Route::post('/update/{id}','ProposalController@update');
+Route::post('/update','ProposalController@update');
 Route::get('/delproposal/{id}/pilihan/{token}','ProposalController@delete');
 
 // =======
@@ -83,6 +83,7 @@ Route::prefix('laporan')->group(function()
 	Route::get('/index','laporanController@index')->name('laporan');
 	Route::get('/add','laporanController@add');
 	Route::post('/store','laporanController@store');
+	Route::post('/update','laporanController@update');
 	Route::get('/edit/{id}','laporanController@edit');
 	Route::get('/delete/{id}','laporanController@delete');
 	

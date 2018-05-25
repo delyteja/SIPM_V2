@@ -10,6 +10,9 @@ use App\Proposal;
 use App\User;
 
 use Auth;
+
+
+
 class ProposalController extends Controller
 {
     
@@ -55,11 +58,10 @@ class ProposalController extends Controller
 
     }
 
-    public function update(Request $request,$id)
-    {  //$temp=Proposal::where('id','like','$id');
+    public function update(Request $request)
+    {  $id = $request->get('id_post');
        $posts = Proposal::findorfail($id);
-       // $tempnama=$posts->namafoto;
-       // $temptipe=$posts->typefoto;
+      // dd($request->id_kategori);
         
         if (Input::hasFile('foto')) 
         {
@@ -71,14 +73,13 @@ class ProposalController extends Controller
             $posts->typefoto=$pic->getClientMimeType();
         }
     
-            $posts->email=$request->email;
             $posts->namausaha=$request->namausaha;
-            $posts->biaya=$request->biaya;
-            $posts->tempatusaha=$request->tempatusaha;
+            $posts->kebutuhan_dana=$request->kebutuhan_dana;
+            $posts->lokasi=$request->lokasi;
             $posts->diskripsi=$request->diskripsi;
-            $posts->kategori=$request->kategori;
+            $posts->id_kategori=$request->id_kategori;
 
-            $posts->update($request->all());
+            $posts->save();
             return redirect('/index');
 
        
@@ -108,7 +109,5 @@ class ProposalController extends Controller
         $pebisnis = User::where('no_ktp',$proposal->no_ktp_pebisnis)->first();
         return view('proposal.main',compact('proposal','pebisnis'));
     }
-
-
           
 }

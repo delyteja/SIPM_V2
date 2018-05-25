@@ -57,7 +57,7 @@ User
           role="button"><i class="fa fa-pencil-square"></i> Edit</a>
         </td>
         <td align="center" width="30px">
-          <a href="/delpostingan/{{$p->id}}/pilihan/1" class="btn btn-sm btn-danger delete-btn" 
+          <a href="/delproposal/{{$p->id}}/pilihan/1" class="btn btn-sm btn-danger delete-btn" 
           role="button"><i class="fa fa-times-circle"></i> delete</a>
         </td>       
     </tr>

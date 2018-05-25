@@ -32,13 +32,20 @@ class LaporanController extends Controller
         $laporan->save();
         return redirect('laporan/index')->with('sukses','Data laporan berhasil ditambahkan');
     }
-    public function edit()
-    {
-
+    public function edit($id)
+    {  
+        $laporan = Laporan::findOrFail($id);
+        return view('laporan.edit',compact('laporan'));
     }
-    public function update()
+    public function update(Request $request)
     {
-
+      $id = $request->get('id_laporan');
+      $laporan = Laporan::findOrFail($id);
+      $laporan->aktivitas = $request->aktivitas;
+      $laporan->biaya = $request->biaya;
+      $laporan->keterangan = $request->keterangan;
+      $laporan->save();
+       return redirect('laporan/index')->with('sukses','Data laporan berhasil diubah');
     }
     public function delete($id)
     {
