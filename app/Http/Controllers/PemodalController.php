@@ -6,6 +6,7 @@ use App\Investasi;
 use Illuminate\Http\Request;
 use App\Proposal;
 use App\User;
+use Input;
 
 use Auth;
 

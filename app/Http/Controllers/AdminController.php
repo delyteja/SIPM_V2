@@ -52,17 +52,34 @@ class AdminController extends Controller
         return view('admins.investasi', compact('investasi'));
     }
     
-   public function verifikasiInvestasi($id)
+   public function verifikasiInvestasi($id, $ktp, $jumlah)
    {
-       DB::table('investasi')
-           ->where('id', $id)
-           ->update(['status' => 1]);
+
+    $p = Investasi::findorfail($id);
+    $p->status = 1;
+    $p->save();
+
+    $prop = Proposal::where('no_ktp_pebisnis', $ktp)->first();
+    $prop->dana_terkumpul += $jumlah;
+    $prop->save();
+
+    return redirect()->action('AdminController@kelolaInvestasi')->with('sukses', 'Investasi berhasil diverifikasi');
+    
+    
    }
 
-   public function batalInvestasi($id)
+   public function batalInvestasi($id, $ktp, $jumlah)
    {
-       DB::table('investasi')
-           ->where('id', $id)
-           ->update(['status' => 0]);
+    
+    $p = Investasi::findorfail($id);
+    $p->status = 1;
+    $p->save();
+
+    $prop = Proposal::where('no_ktp_pebisnis', $ktp)->first();
+    $prop->dana_terkumpul -= $jumlah;
+    $prop->save();
+
+    return redirect()->action('AdminController@kelolaInvestasi')->with('sukses', 'Investasi berhasil diverifikasi');
+
    }
 }

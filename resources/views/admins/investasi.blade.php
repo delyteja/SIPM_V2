@@ -20,31 +20,21 @@
                                 <th class="col-md-2">Aksi</th>
                             </tr>
                         <tbody>
-                            <tr>
-                                    <td class="col-md-2">1231231231231231</td>
-                                    <td class="col-md-2">7897897897897897</td>
-                                    <td class="col-md-2">100000</td>
-                                    <td class="col-md-3"><img src="/foto/2.jpg" style="width: 150px; height: 150px;"></td>
-                                    <td class="col-md-1">03 Mei 2018</td>
-                                    <td class="col-md-2">
-                                    <a href="#" class="btn btn-success">Verifikasi</a></td>
-                                    </td>
-                            </tr>
-                            <!-- @foreach ($investasi as $oneinvestasi )
+                            @foreach ($investasi as $oneinvestasi )
                                 <tr>
                                     <td class="col-md-2">{{$oneinvestasi['no_ktp_pemodal']}}</td>
                                     <td class="col-md-2">{{$oneinvestasi['no_ktp_pebisnis']}}</td>
                                     <td class="col-md-2">{{$oneinvestasi['jumlah']}}</td>
-                                    <td class="col-md-3"><img src="/foto/{{ $oneinvestasi['namafoto'] }}" style="width: 150px; height: 150px;"></td>
+                                    <td class="col-md-3"><img src="/bukti_investasi/{{ $oneinvestasi['namafoto'] }}" style="width: 150px; height: 150px;"></td>
                                     <td class="col-md-1">{{$oneinvestasi['updated_at']}}</td>
                                     <td class="col-md-2">
                                     @if ( $oneinvestasi['status'] == 0 )
-                                    <a href="{{ route('admin.verifikasiInvestasi', $oneinvestasi->id ) }}" class="btn btn-success">Verifikasi</a></td>
+                                    <a href="{{ route('admin.verifikasiInvestasi', $oneinvestasi->id, $oneinvestasi['no_ktp_pebisnis'], $oneinvestasi['jumlah']) }}" class="btn btn-success">Verifikasi</a></td>
                                     @else
-                                    <a href="{{ route('admin.batalInvestasi', $oneinvestasi->id ) }}" class="btn btn-danger">Batalkan</a></td>
+                                    <a href="{{ route('admin.batalInvestasi', $oneinvestasi->id, $oneinvestasi['no_ktp_pebisnis'], $oneinvestasi['jumlah']) }}" class="btn btn-danger">Batalkan</a></td>
                                     @endif
                                 </tr>
-                            @endforeach -->
+                            @endforeach
                         </tbody>
                         </thead>
                       </table>

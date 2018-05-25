@@ -109,6 +109,7 @@ for (i = 0; i < acc.length; i++) {
         <button class="accordion"><b>Chat Dengan Pebisnis > </b> </button>
         <div class="panel">
           <p><b>Chat via pesan pada email: {{$pebisnis->email}}</b></p>
+          <p><b>Nomor KTP: {{$pebisnis->no_ktp}}</b></p>
         </div>
         <button class="accordion"><b>Lihat Rekening > </b> </button>
         <div class="panel">

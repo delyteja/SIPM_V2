@@ -1,13 +1,15 @@
 <div class="modal fade" id="modal-investasi" role="dialog">
   <div class="modal-dialog">
-    <div class="form-horizontal" id="form-investasi" action="{{ route('do_investasi.submit') }}" method="POST">
+    <!-- <form class="form-horizontal" id="form-investasi" action="{{ route('do_investasi.submit') }}" method="POST"> -->
+    <form method="POST" action="{{ URL::to('/pemodal/do_investasi') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            {{ csrf_field() }}
       <div class="modal-content" style="background-color: #a7a5a5;">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title"><strong>INVESTASI</strong></h4>
         </div>
         <div class="modal-body">
-          <input id="no_ktp_pebisnis" name="no_ktp_pebisnis" type="hidden" value="{{ $pebisnis['no_ktp_pebisnis'] }}" >
+          <input id="no_ktp_pebisnis" name="no_ktp_pebisnis" type="hidden" value="{{ $pebisnis['no_ktp'] }}" >
           <input id="proposal_id" name="proposal_id" type="hidden" value="{{ $proposal['id'] }}" >
           <div class="form-group">
             <label class="col-sm-3 control-label">Jumlah Investasi</label>
@@ -29,10 +31,11 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-success pull-right" id="do_invest" data-dismiss="modal" data-toggle="modal" data-target="#investasi_sukses">Kirim</button>
+          <input type="submit" class="btn btn-success pull-right" id="do_invest" value="Kirim">
+          <!-- <button type="button" class="btn btn-success pull-right" id="do_invest" data-dismiss="modal" data-toggle="modal" data-target="#investasi_sukses">Kirim</button> -->
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 
