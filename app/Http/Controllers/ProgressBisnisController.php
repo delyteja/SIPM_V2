@@ -64,6 +64,7 @@ class ProgressBisnisController extends Controller
     public function delete($id)
     {
         $del = ProgressBisnis::findorfail($id);
+        
         $del->delete();
         return redirect()->action('ProgressBisnisController@index')->with('sukses', 'Progress Bisnis Berhasil Dihapus');
         

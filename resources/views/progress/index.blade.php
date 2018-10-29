@@ -9,18 +9,18 @@ Progress Pengerjaan Bisnis
 
 
 @section('content')
- <div class="panel panel-default">
+<div class="panel panel-default">
 <div class="panel-body" style="margin-bottom:200px;">
-<h4><i class="fa fa-university"></i> Progress Pengerjaan Bisnis</h4><hr>
-<div class=row>
-    <div class="col-md-6">
-        <a href="{{ URL::to('progress/add')}}" class="btn btn-primary">
-        <i class="fa fa-plus-circle"></i> Tambah progres</a>
+  <h4><i class="fa fa-university"></i> Progress Pengerjaan Bisnis</h4><hr>
+    <div class=row>
+        <div class="col-md-6">
+            <a href="{{ URL::to('progress/add')}}" class="btn btn-primary">
+            <i class="fa fa-plus-circle"></i> Tambah progres</a>
+        </div>
+      <div class="col-md-2">
+      </div>
+        <div class="col-md-4"></div>
     </div>
-  <div class="col-md-2">
-  </div>
-    <div class="col-md-4"></div>
-</div>
 <br>
 
 <div class="table-responsive">
