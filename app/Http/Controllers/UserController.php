@@ -19,6 +19,10 @@ class UserController extends Controller
          $posts = Proposal::where('no_ktp_pebisnis',Auth::user()->no_ktp)->get();
         return view('user.index', compact('posts'));
     }
+    
+    public function edukasi_peternak(){
+        return view('user.edukasi_peternak');
+    }
 
     public function profile()
     {

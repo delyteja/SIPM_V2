@@ -23,5 +23,13 @@ class Controller extends BaseController
         return view('index',compact('perdagangan','peternakan'));
         
     }
+
+    public function edukasi_peternak(){
+        return view('user.edukasi_peternak');
+    }
+
+    public function edukasi_investor(){
+
+    }
     
 }

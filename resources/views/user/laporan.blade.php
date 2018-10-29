@@ -13,7 +13,7 @@ Laporan Pendanaan
 <div class="panel-body" style="margin-bottom:200px;">
 <h4><i class="fa fa-university"></i> Laporan Pendanaan Usaha Warung Pak Dani</h4><hr>
 <div class=row>
-    <div class="col-md-6">
+    <div class="col-md-6" >
         <a href="#" class="btn btn-primary">
         <i class="fa fa-plus-circle"></i> Tambah Aktivitas</a>
     </div>

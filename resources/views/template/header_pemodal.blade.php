@@ -7,7 +7,8 @@
     <ul class="nav navbar-nav">
       <li><a href="{{ URL::to('/pemodal')}}" style="color:white;font-size:17px;"><b>Beranda</b></a></li>
       <li><a href="{{ URL::to('laporan/index')}}" style="color:white; font-size:17px;"><b>Laporan Pendanaan</b></a></li>
-      <li><a href="{{ URL::to('progress')}}" style="color:white; font-size:17px;"><b>Progres Bisnis</b></a></li>
+      <li><a href="{{ URL::to('progress')}}" style="color:white; font-size:17px;"><b>Progres Peternakan</b></a></li>
+      <li><a href="{{ URL::to('/edukasi_investor')}}" style="color:white; font-size:17px;"><b>Edukasi Investor</b></a></li>
       <li><a href="{{ route('pemodal_inbox') }}" style="color:white;font-size:17px;"><b>Pesan</b></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

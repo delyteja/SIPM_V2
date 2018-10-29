@@ -14,9 +14,10 @@
             <li><a href="#" style="color:white">Wirausaha Mandiri</a></li>
           </ul>
       </li> -->
-      <li><a href="{{ URL::to('/index')}}" style="color:white; font-size:17px;"><b>Pengajuan Bisnis</b></a></li>
+      <li><a href="{{ URL::to('/index')}}" style="color:white; font-size:17px;"><b>Pengajuan Ternak</b></a></li>
       <li><a href="{{ URL::to('laporan/index')}}" style="color:white; font-size:17px;"><b>Laporan Pendanaan</b></a></li>
-      <li><a href="{{ URL::to('progress')}}" style="color:white; font-size:17px;"><b>Progres Bisnis</b></a></li>
+      <li><a href="{{ URL::to('progress')}}" style="color:white; font-size:17px;"><b>Progres Peternakan</b></a></li>
+      <li><a href="{{ URL::to('/edukasi_peternak')}}" style="color:white; font-size:17px;"><b>Edukasi Ternak</b></a></li>
       <li><a href="{{ route('inbox') }}" style="color:white; font-size:17px;"><b>Pesan</b></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

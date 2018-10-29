@@ -13,7 +13,7 @@ User
 <div class="panel-body" style="margin-bottom:150px;">
 <h4><i class="fa fa-university"></i> Postingan Saya</h4><hr>
 <div class=row>
-    <div class="col-md-6">
+    <div class="col-md-6" style="margin-left:-230px">
         <a href="{{url('createproposal')}}" class="btn btn-primary">
         <i class="fa fa-plus-circle"></i> Tambah</a>
     </div>

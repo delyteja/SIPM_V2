@@ -13,9 +13,9 @@ Laporan Pendanaan
 <div class="panel-body" style="margin-bottom:300px;">
 <h4><i class="fa fa-university"></i> Laporan Pendanaan</h4><hr>
 <div class=row>
-    <div class="col-md-6">
+    <div class="col-md-6" style="margin-left:-190px;">
         <a href="{{ URL::to('laporan/add')}}" class="btn btn-primary">
-        <i class="fa fa-plus-circle"></i> Tambah Aktivitas</a>
+        <i class="fa fa-plus-circle"></i> Tambah Laporan</a>
     </div>
   <div class="col-md-2">
   </div>

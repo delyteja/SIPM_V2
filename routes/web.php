@@ -119,6 +119,8 @@ Route::get('/PakDani','UserController@PakDani');
 Route::get('/location/{lokasi}','AdminController@location');
 
 Route::get('/proposal/detail/{nama}/{dana}','ProposalController@detail');
+Route::get('/edukasi_peternak','UserController@edukasi_peternak');
+Route::get('/edukasi_investor','Controller@edukasi_investor');
 
 
 
