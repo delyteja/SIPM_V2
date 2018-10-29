@@ -31,7 +31,7 @@ User
                   table-hover table-condensed tfix">
     <thead align="center">
       <tr>
-        <td><b>Nama Uasaha</b></td>
+        <td><b>Nama Usaha</b></td>
         <td><b>Kategori</b></td>
         <td><b>Tempat Usaha</b></td>
         <td><b>Biaya</b></td>

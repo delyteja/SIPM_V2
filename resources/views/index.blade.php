@@ -1,4 +1,4 @@
-@extends('template.master')
+@extends('template.master_pemodal')
 @section('judul')
 Home
 @endsection
@@ -28,7 +28,7 @@ Home
       <h2><p>Perdagangan</p></h2>
       <div class="row">
     @foreach($perdagangan as $p)
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="thumbnail">
             <img src="/foto/{{$p->namafoto}}" alt="{{$p->namafoto}}" width="400" height="200">
             <a href="{{ URL::to('/proposal/detail/'.$p->namausaha.'/'.$p->kebutuhan_dana)}}"><p><strong>{{$p->namausaha}}</strong></p></a>
@@ -59,8 +59,7 @@ Home
           </div>
         </div>
       @endforeach
-
-
+      
       </div>
       </div>
     </div>
