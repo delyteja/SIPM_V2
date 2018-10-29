@@ -2,7 +2,7 @@
 <nav class="navbar navbar-inverse" style="background-color:#00384d; margin-top:-60px">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{{ URL::to('/')}}" style="color:white"><b>SIPM</b></a> 
+      <a class="navbar-brand" href="{{ URL::to('/')}}" style="color:white"><b>TernaKita</b></a> 
     </div>
     <ul class="nav navbar-nav">
       <li><a href="{{ URL::to('/')}}" style="color:white; font-size:17px;"><b>Beranda</b></a></li>

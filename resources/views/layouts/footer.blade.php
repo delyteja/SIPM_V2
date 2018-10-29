@@ -5,5 +5,5 @@
       Sistem Informasi Pencarian Modal
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2018 <a href="#">SIPM</a>.</strong>  All rights reserved.
+    <strong>Copyright &copy; 2018 <a href="#">TernaKita</a>.</strong>  All rights reserved.
   </footer>
