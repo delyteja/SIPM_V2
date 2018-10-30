@@ -12,13 +12,13 @@ Home
 @endsection
 
 @section('content')
-<ul class="nav nav-tabs" role="tablist">
+<!-- <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#newpost" aria-controls="newpost" role="tab" data-toggle="tab">Perdagangan</a></li>
   <li role="presentation"><a href="#favourites" aria-controls="favourites" role="tab" data-toggle="tab">Peternakan</a></li>
-</ul>
+</ul> -->
 <!-- <br> -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="newpost">      
+  <!-- <div role="tabpanel" class="tab-pane active" id="newpost">      
     <div class="row text-center">
       <h2><p>Perdagangan</p></h2>
       <div class="row">
@@ -36,11 +36,11 @@ Home
     @endforeach
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div role="tabpanel" class="tab-pane" id="favourites">
+  <div role="tabpanel" class="tab-pane active" id="favourites">
     <div class="row text-center">
-      <h2><p>Peternakan</p></h2>
+      <h2><p>Daftar Peternakan</p></h2>
       <div class="row">
       @foreach($peternakan as $pn)
         <div class="col-sm-3">
